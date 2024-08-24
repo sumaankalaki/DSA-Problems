@@ -1,0 +1,179 @@
+<ux-tree
+    [model]="{
+        children: [
+            {
+                title: 'Customer Parameters',
+                opened: true,
+                selected: true,
+                children: [
+                    {
+                        title: 'Customer Id',
+                        opened: true,
+                        selected: false,
+                        disabled: true
+                    },
+                    {
+                        title: 'Name',
+                        opened: false,
+                        selected: false,
+                        children: [
+                            {
+                                title: 'First Name',
+                                selected: false
+                            },
+                            {
+                                title: 'Surname',
+                                selected: false
+                            },
+                            {
+                                title: 'Suffix',
+                                selected: false
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Contact Number',
+                        selected: false
+                    },
+                    {
+                        title: 'Address',
+                        selected: false
+                    }
+                ]
+            },
+            {
+                title: 'Billing Account Parameters',
+                selected: false,
+                children: [
+                    {
+                        title: 'Billing Account Parameter 1',
+                        selected: false
+                    },
+                    {
+                        title: 'Billing Account Parameter 2',
+                        selected: false
+                    }
+                ],
+                opened: true
+            },
+            {
+                title: 'Order Parameters',
+                selected: false,
+                children: [
+                    {
+                        title: 'Order Parameter 1',
+                        selected: false
+                    },
+                    {
+                        title: 'Order Parameter 2',
+                        selected: false
+                    },
+                    {
+                        title: 'Order Parameter 3',
+                        selected: false
+                    }
+                ],
+                opened: false
+            }
+        ]
+    }"
+    [selectableNodes]="true"
+></ux-tree>
+
+
+dicitionary = {
+    project:{}
+    ticketCategory:{
+        Default_configurationTemplateId:{
+            3D_PARTY_CONTENT:{
+                configurationTemplateId:"Default_configurationTemplateId"
+                createdBy: "Anonymous User"
+                createdByAuditName: "Anonymous User"
+                createdById: "anonymousUserId"
+                name: "3D_PARTY_CONTENT"
+                parentName: "BAD_CUSTOMER_SERVICE"
+            }
+            BAD_CUSTOMER_SERVICE:{
+                configurationTemplateId:"Default_configurationTemplateId"
+                createdBy: "Anonymous User"
+                createdByAuditName: "Anonymous User"
+                createdById: "anonymousUserId"
+                name: "BAD_CUSTOMER_SERVICE"
+            }
+            }
+
+        }
+
+    }
+
+
+    
+
+export type OlaMetricsNodeDetails = {
+    type?: OlaMetricsNodeType;
+    policy?: CpmDictionariesOlaPolicy;
+    olaLevelCode?: CpmDictionariesOlaLevel;
+    breach?: CpmDictionariesOlaBreach;
+    createNewAction?: any;
+    deleted?: boolean;
+};
+export interface CpmDictionariesOlaPolicy extends CpmDictionaryWithTimeStamp {
+    id?: string;
+    olaLevelCode?: string;
+    businessCalendarId?: string;
+    conditionRule?: OlaConditionRule;
+    targets?: OlaPolicyTarget;
+}
+export interface CpmDictionaryWithTimeStamp extends BaseCpmDictionaryWithName {
+    deletedTimestamp?: string;
+    createdTimestamp?: string;
+    updatedTimestamp?: string;
+}
+export type OlaConditionRule = {
+    combiningLogic?: OlaConditionLogic;
+    childConditionNodes?: OlaConditionRule[];
+    isInverse?: boolean;
+    source?: string;
+    operator?: OlaOperator;
+    value?: any;
+};
+export type OlaPolicyTarget = {
+    assigneeWorkTime: OlaPolicyTargetDetails;
+    requesterWaitTime: OlaPolicyTargetDetails;
+    resolutionTime: OlaPolicyTargetDetails;
+};
+
+export type OlaPolicyTargetDetails = Record<string, OlaPolicyTargetDetailsValue>;
+export type OlaPolicyTargetDetailsValue = {
+    startExpiringValue: string;
+    targetValue: string;
+};
+
+here extends interface ExtendedOlaConditionRule {
+    category?: string;
+    subcategory?: string;
+}
+
+export type EnhancedOlaConditionRule = OlaConditionRule & ExtendedOlaConditionRule;
+
+
+
+const ticketCategory = {
+    Default_configurationTemplateId: "Default_configurationTemplateId",
+    configurationTemplateId: "Default_configurationTemplateId",
+    createdBy: "Anonymous User",
+    createdByAuditName: "Anonymous User",
+    createdById: "anonymousUserId",
+    createdTimestamp: "2024-01-11T07:29:35.293583Z",
+    description: "description",
+    isDefault: false,
+    localizedName: {
+        en: "3d Party Content"
+    },
+    name: "3D_PARTY_CONTENT",
+    ticketType: ["SUBTASK"],
+    updatedBy: "Anonymous User",
+    updatedByAuditName: "Anonymous User",
+    updatedById: "anonymousUserId",
+    updatedTimestamp: "2024-01-11T07:29:35.293583Z"
+};
