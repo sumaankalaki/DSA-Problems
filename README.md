@@ -7,3 +7,6 @@ BACKTRACK Leetcode Question
 1. https://leetcode.com/problems/subsets/submissions/1419980750/
 2. https://leetcode.com/problems/subsets-ii/submissions/1420005330/
 3.  COMBINATION: 3.0  BackTracking Approach:  https://leetcode.com/problems/combinations/submissions/1420829386/  3.1 Optimized Approach: https://leetcode.com/problems/combinations/submissions/1420830581/
+4. COMBINATION SUM [DUPLICATES ALLOWED[: 4.0 BackTracking Approach: https://leetcode.com/problems/combination-sum/submissions/1420842811/
+5. COMBINATION SUM 2 [DUPLICATES NOT ALLOWED[: 5.0 https://leetcode.com/problems/combination-sum-ii/submissions/1420852267/
+6. COMBINATION SUM 3
