@@ -6,3 +6,5 @@ ARRAY Leetcode question
 BACKTRACK Leetcode Question
 1. https://leetcode.com/problems/subsets/submissions/1419980750/
 2. https://leetcode.com/problems/subsets-ii/submissions/1420005330/
+3. https://leetcode.com/problems/combinations/submissions/1420829386/
+   3.1 Optimized Approach: https://leetcode.com/problems/combinations/submissions/1420830581/
