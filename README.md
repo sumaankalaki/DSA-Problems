@@ -10,3 +10,9 @@ BACKTRACK Leetcode Question
 4. COMBINATION SUM [DUPLICATES ALLOWED[: 4.0 BackTracking Approach: https://leetcode.com/problems/combination-sum/submissions/1420842811/
 5. COMBINATION SUM 2 [DUPLICATES NOT ALLOWED[: 5.0 https://leetcode.com/problems/combination-sum-ii/submissions/1420852267/
 6. COMBINATION SUM 3
+
+
+https://docs.google.com/spreadsheets/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/edit?gid=0#gid=0
+https://docs.google.com/spreadsheets/d/1ZcTz4VRK-lom32foZj0X7YbTIjNRwQBw5yo8kBVy_PI/edit?gid=0#gid=0
+
+https://leetcode.com/problem-list/edt74a3d/
