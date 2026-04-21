@@ -36,7 +36,7 @@ Best combination:
 
 
 
-//MomoZization
+//MomoZization/ Top-down
 
 function knapSackMemo(W, wt, val, n){
     //n rows and W+1 columns
@@ -66,7 +66,7 @@ function knapSackMemo(W, wt, val, n){
 console.log(knapSackMemo(8,[ 8,3,5],[2,3,8], 3));
 
 
-//bottom up - space optiomization
+//bottom up - Tabulation
 function knapSackbottom(W, wt, val, n){
     //n rows and W+1 columns
     const dp = Array.from({length:n+1},()=>Array(W+1).fill(0));
@@ -82,7 +82,30 @@ function knapSackbottom(W, wt, val, n){
         }
     }
   return dp[n][W];
-
 }
 
 console.log(knapSackbottom(8,[ 8,3,5],[2,3,8], 3));
+
+//SpaceOptimized bottomup
+
+function knapSackSpaceOptimized(W, wt, val, n){
+    //n rows and W+1 columns
+    let prev = Array(W+1).fill(0);
+    let curr = Array(W+1).fill(0);
+    
+    for(let i=1;i<=n; i++){
+        for(let j=1;j<=W;j++){
+            const exclude = prev[j];
+            let include = 0;
+
+            if(wt[i-1]<=j){
+               include = val[i - 1] + prev[j-wt[i-1]];
+            }
+            curr[j]=Math.max(exclude,include);
+        }
+        prev = curr.slice();
+    }
+  return curr[W];
+}
+
+console.log(knapSackSpaceOptimized(8,[ 8,3,5],[2,3,8], 3));
