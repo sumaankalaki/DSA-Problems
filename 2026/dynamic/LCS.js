@@ -34,7 +34,7 @@ let longestCommonSubsequence = function (text1, text2){
      return helper(0,0);
 }
 // Run one by one to understand
-console.log(longestCommonSubsequence("abcdef","acef")); //4
+console.log("longestCommonSubsequence",longestCommonSubsequence("abcdef","acef")); //4
 // console.log(longestCommonSubsequence("abcde","ace"));  // 3
 
 
@@ -67,7 +67,7 @@ let longestCommonSubsequenceMemo = function (text1, text2){
     return helper(0, 0);
 }
 // test
-console.log(longestCommonSubsequenceMemo("abcde", "ace")); // 3
+console.log("longestCommonSubsequenceMemo",longestCommonSubsequenceMemo("abcde", "ace")); // 3
 
 
 
@@ -90,4 +90,27 @@ var longestCommonSubsequenceTabu =  function (text1, text2){
         }
         return dp[n][m];
 }
-console.log(longestCommonSubsequenceTabu("abcde", "ace"));
+console.log("longestCommonSubsequenceTabu",longestCommonSubsequenceTabu("abcde", "ace"));
+
+
+// Space optimized
+
+var longestCommonSubsequenceSpaceOptmized =  function (text1, text2){
+        const n = text1.length;
+        const m = text2.length;
+        let prev = Array(m+1).fill(0);
+        let curr = Array(n+1).fill(0);
+
+        for(let i=1; i<=n; i++){
+            for(let j=1; j<=m; j++){
+                if(text1[i-1]===text2[j-1]){
+                    curr[j]= 1+prev[j-1];
+                }else{
+                    curr[j] = Math.max(curr[j-1],prev[j]);
+                }
+            }
+            prev= [...curr];
+        }
+        return curr[m];
+}
+console.log("longestCommonSubsequenceSpaceOptmized",longestCommonSubsequenceSpaceOptmized("abcde", "ace"));
