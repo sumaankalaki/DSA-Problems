@@ -52,3 +52,15 @@ var eraseOverlapIntervals = function(intervals) {
 console.log(eraseOverlapIntervals([[1,2],[2,3],[3,4],[1,3]])); // 1
 console.log(eraseOverlapIntervals([[1,2],[1,2],[1,2]]));       // 2
 console.log(eraseOverlapIntervals([[1,2],[2,3]]));             // 0
+
+
+/**
+ * 
+ * 💡 Pattern Recognition
+This same "sort by end time, greedy keep" pattern solves many interval problems:
+
+Activity Selection Problem (classic greedy)
+LC 452 — Minimum arrows to burst balloons
+LC 646 — Maximum length of pair chain
+LC 1353 — Maximum number of events attended
+ */
